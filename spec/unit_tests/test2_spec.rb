@@ -1,6 +1,11 @@
 require "rails_helper"
 
 RSpec.describe "/projects", type: :request do
+    before(:each) do
+        user = User.create!(email: 'test2@gmail.com', password: 'testing')
+        login_as user
+    end
+    
     let(:valid_attributes) do
         {
             'title' => 'Test Title',

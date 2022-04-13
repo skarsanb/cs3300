@@ -2,6 +2,11 @@ require 'rails_helper'
 #require 'factory_bot_rails'
 
 RSpec.feature "Projects", type: :feature do
+  before(:each) do
+    user = User.create!(email: 'test2@gmail.com', password: 'testing')
+    login_as user
+  end
+  
   context "Create new project" do
     before(:each) do
       #user = FactoryBot.create(:user)
