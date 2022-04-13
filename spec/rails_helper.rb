@@ -33,6 +33,7 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 RSpec.configure do |config|
+  #config.include Devise::Test::ControllerHelpers, type: :controller
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
@@ -69,3 +70,7 @@ SimpleCov.start 'rails' do
   add_filter '/spec/' # for rspec
   add_filter '/projects_helper.rb'
 end
+
+#user_signed_in?
+#current_user
+#user_session

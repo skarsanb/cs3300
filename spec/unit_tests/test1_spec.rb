@@ -1,6 +1,7 @@
 require "rails_helper"
 
 RSpec.describe "/projects", type: :request do
+    #current_user = User.new(email: 'test@gmail.com', password: 'testing')
     let(:valid_attributes) do
         {
             'title' => 'Test Title',

@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.describe "/projects", type: :request do
     let(:valid_attributes) do
         {
-            'id' => '1',
+            #'id' => '1',
             'title' => 'Test Title',
             'description' => 'Test Description',
             'created_at' => 'Test created_at',
